@@ -1,0 +1,23 @@
+
+body{
+	background-color: #334C5B;
+}
+
+h1{
+	color: white;
+}
+
+/*  */
+
+.square {
+	width: 30%;
+	padding-bottom: 30%; /* need that */
+	background-color: yellow; /*  */
+	float: left;  /* allow squares to be next to each othere */
+	margin: 1.60%; /* Space in between Squares */
+}
+
+#container {
+	margin: 0 auto; /*  0 means there is no marging on top, AUTO means that left and right has the same space at all time... Center */
+	max-width: 600px;
+}
