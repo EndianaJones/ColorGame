@@ -14,7 +14,7 @@ var colors = [
 
 
 
-var squares = document.querySelectorAll(".square"); //This select all div that has the class square
+var squares = document.querySelectorAll(".square"); //This select ALL div that has the class square... squares is  an array like
 
 for(var i = 0; i < squares.length; i++) {
 
