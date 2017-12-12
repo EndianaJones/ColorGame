@@ -21,3 +21,16 @@ h1{
 	margin: 0 auto; /*  0 means there is no marging on top, AUTO means that left and right has the same space at all time... Center */
 	max-width: 600px;
 }
+
+#c {
+	margin: 0 auto;
+}
+
+#strip{
+	background-color: white;
+	width: 100%;
+	margin: 0%;
+	/*padding-bottom: 30px;*/
+	height: 30px;
+	text-align: center;
+}
