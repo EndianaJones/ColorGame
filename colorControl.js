@@ -2,21 +2,74 @@
 
 //array 
 
-var colors = creator(6);
+
+
+
+var numSquares = 6;
+var colors = generating(numSquares);
 var picked = randomise();
 var guessColor = document.getElementById("rightColor"); // Picked text 
 guessColor.textContent = picked;
 var message = document.getElementById("message");
 var h1 = document.querySelector("h1"); // select h1
 var squares = document.querySelectorAll(".square"); //This select ALL div that has the class square... squares is  an array like
+var easBtn = document.querySelector("#easy");
+var hrdBtn = document.querySelector("#hard");
 
+easBtn.addEventListener("click", function(){
+	
+	easBtn.classList.add("selected");
+	hrdBtn.classList.remove("selected");
+	message.textContent ="";
+
+    numSquares = 3;
+	colors = generating(numSquares);
+	picked = randomise();
+	guessColor.textContent = picked;
+
+	for(var i = 0; i < squares.length; i++) {
+
+		if(i < 3){
+
+			squares[i].style.backgroundColor = colors[i];
+
+		} else {
+			squares[i].style.display = "none"; // this HIDE the three last squares
+		}
+    }
+
+});
+
+hrdBtn.addEventListener("click", function(){
+	easBtn.classList.remove("selected");
+	hrdBtn.classList.add("selected");
+	numSquares = 6;
+	colors = generating(numSquares);
+	picked = randomise();
+	guessColor.textContent = picked;
+	message.textContent =" ";
+
+	for(var i = 0; i < squares.length; i++) {
+
+		
+
+			squares[i].style.backgroundColor = colors[i];
+
+		
+			squares[i].style.display = "block"; // this SHOW the three last squares
+		
+    }
+
+});
 
 //get my button
 var button = document.querySelector("button");
 button.addEventListener("click",function(){
 
+
+	message.textContent =" ";
 	//new colors
-	colors = creator(6);
+	colors = generating(numSquares);
 
 	//new goals
 	picked = randomise();
@@ -25,7 +78,7 @@ button.addEventListener("click",function(){
 	guessColor.textContent = picked;
 
 	//reset back
-	h1.style.backgroundColor= "#334C5B";
+	h1.style.backgroundColor= "steelblue";
 
 	button.textContent = "New Colors";
 
@@ -73,6 +126,7 @@ for(var i = 0; i < squares.length; i++) {
 	} );
 
 
+}
 
 	function change(){
 
@@ -89,7 +143,8 @@ for(var i = 0; i < squares.length; i++) {
 		return colors[randomColor];
 	}
 
-	function creator(x){
+
+	function generating(x){
 
 		//create an array
 		var arr = [];
@@ -117,4 +172,6 @@ for(var i = 0; i < squares.length; i++) {
 
 	}
 
-}
+   
+
+	

@@ -1,13 +1,54 @@
 
 body{
 	background-color: #334C5B;
+	margin: 0;
+	font-family: "Montserrat","Avenir";
 }
 
 h1{
 	color: white;
+	margin: 0;
+	text-align: center;
+	background-color: steelblue;
+	text-transform: uppercase;
+	font-weight: normal;
+	padding: 20px 0;
+	line-height: 1.1;
+}
+
+button {
+	border: none;
+	background: none;
+	font-family: "Montserrat","Avenir";
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;
+	transition: all 1.0s; /* This add transition when clicking on the button */
+}
+
+button:hover {
+
+	background-color: steelblue;
+	color: white;
+
 }
 
 /*  */
+
+#rightColor{
+	font-size: 200%;
+    
+}
+
+#message{
+	display: inline-block;
+	width: 20%;
+	font-family: inherit;
+	text-transform: uppercase;
+
+}
 
 .square {
 	width: 30%;
@@ -15,6 +56,8 @@ h1{
 	background-color: yellow; /*  */
 	float: left;  /* allow squares to be next to each othere */
 	margin: 1.60%; /* Space in between Squares */
+	transition: all 0.5s;
+	border-radius: 15%; /* Make the borders smooth  */
 }
 
 #container {
@@ -33,4 +76,10 @@ h1{
 	/*padding-bottom: 30px;*/
 	height: 30px;
 	text-align: center;
+}
+
+.selected {
+
+	background-color: steelblue;
+	color: white;
 }
