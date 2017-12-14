@@ -21,6 +21,7 @@ easBtn.addEventListener("click", function(){
 	easBtn.classList.add("selected");
 	hrdBtn.classList.remove("selected");
 	message.textContent ="";
+	button.textContent = "New Colors";
 
     numSquares = 3;
 	colors = generating(numSquares);
@@ -48,6 +49,7 @@ hrdBtn.addEventListener("click", function(){
 	picked = randomise();
 	guessColor.textContent = picked;
 	message.textContent =" ";
+	button.textContent = "New Colors";
 
 	for(var i = 0; i < squares.length; i++) {
 
